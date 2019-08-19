@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>bar</title>
+</head>
+<body th:inline="text">
+<!--侧边栏开始 -->
+    <div class="col-md-2 col-sm-2 col-xs-2 text-center" style="margin-right: -2rem;" th:fragment="sidebar">
+        <nav class="admNavl">
+            <ul class="nav nav-pills nav-stacked ">
+                <li>
+                    <div class="admBlog">
+                        <h4>ZYZ BLOG</h4>
+                    </div>
+                </li>
+                <li class="admInfo admnavlli">
+                    <div class="mob11">
+                        <img src="img/bootstrap-solid.jpg" th:src="@{/img/bootstrap-solid.jpg}" class="img-circle pull-left img-responsive"/>
+                    </div>
+                    <div class="text-left hidden-xs info11">
+                        <h5>admin</h5>
+                        <p>最初不相认，最终不相识</p>
+                    </div>
+                </li>
+                <li class="admnavlli">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseBlog1">
+                        <i class="fa fa-sign-language"></i><span class="hidden-xs">&nbsp博客管理</span>
+                    </a>
+                    <div id="collapseBlog1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked nav12">
+                                <li><a href="#" th:href="@{/createBlog}"><i class="fa fa-clipboard"></i><span class="hidden-xs">&nbsp创建博客</span></a></li>
+                                <li><a href="#"><i class="fa fa-tags"></i><span class="hidden-xs">&nbsp分类管理</span></a></li>
+                                <li><a href="#"><i class="fa fa-list-ol"></i><span class="hidden-xs">&nbsp评论管理</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="admnavlli"><a href="#" th:href="@{/admin}"><i class="fa fa-archive"></i><span class="hidden-xs">&nbsp预览博文</span></a></li>
+                <li class="admnavlli"><a href="#"><i class="fa fa-at"></i><span class="hidden-xs">&nbsp日志管理</span></a></li>
+                <li class="admnavlli"><a href="#"><i class="fa fa-video-camera"></i><span class="hidden-xs">&nbsp系统监控</span></a></li>
+                <li class="admnavlli"><a href="#"><i class="fa fa-gear"></i><span class="hidden-xs">&nbsp系统设置</span></a></li>
+            </ul>
+        </nav>
+    </div>
+<!-- 侧边栏结束 -->
+
+</body>
+</html>

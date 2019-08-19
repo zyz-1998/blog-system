@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>Admin Home</title>
+	<link href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+	<link href="css/custom.css" th:href="@{/css/custom.css}" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+	<script src="js/jquery1.12.4.min.js" th:src="@{/js/jquery1.12.4.min.js}"></script>
+	<script src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	<script th:inline="javascript">
+		$(document).ready(function(){
+		  var htmlContent = /*[[${blog.htmlContent}]]*/
+		  $(".blogPreview").html(htmlContent);
+		});
+	</script>
+</head>
+<body>
+<div class="container-fluid">
+	<!-- Introduce Page navbar left -->
+	<div th:replace="commons/bar::sidebar"></div>
+	<!-- Page Right -->
+	<div class="col-md-10 col-sm-10 col-xs-10">
+		<nav class="navbar navbar-default admNavBac">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><i class="fa fa-bars"></i></a>
+			</div>
+			<ul class="nav navbar-nav navbar-right admNavR">
+				<li><a href="#">前台</a></li>
+				<li><a href="#">关于</a></li>
+			</ul>
+		</nav>
+
+		<div id="main">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title text-center" th:text="${blog.title}"></h3>
+					<span class="pull-right">[[${blog.author}]]</span>
+					<p class="text-center" th:text="${#dates.format(blog.date,'yyyy-MM-dd')}"></p>
+				</div>
+				<div class="panel-body blogPreview">
+					正文
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Right finish -->
+</div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+/* login.html */
+.logCustom{height: 30rem; padding: 0.625rem; box-shadow: 2px 2px 9px #8C8C8C; rgba(255,250,255,0.7);}
+.logRow{position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
+.logBackground{width: 100%; height: 100%; background-image: url(../img/logBackground.jpg); background-size: cover;}
+.logBtn{height: 4rem;}
+.logCustom form input{margin-bottom: 0.6rem;}
+.logInfo{padding: 15px 20px; font-weight: 400; opacity: 0.8px;}
+.logImg{width: 11rem; height: auto;}
+
+/* admin.html */
+
+.pageRight{width:100%;}
+.admNavl{}
+
+.admNavl li, .nav12 li{margin-bottom: 0.7rem;border-radius: 22px;background-color: rgba(188,232,241,0.5);}
+.nav12 li{height:4rem;text-align:center;}
+.nav12 li i{margin-left: -1rem;}
+.admNavl li:hover{font-size: large;}
+.admNavl .admnavlli{border-bottom: solid 1px #E7E7E4;}
+.admInfo{margin:5px 0 5px 0;}
+.admInfo img{width: 5rem; height: 5rem;margin: 1rem 0.7rem 1rem 0.5rem}
+.admInfo p{font-size: 1rem; }
+.admInfo .info11{width: 100%;padding: 7px 0px 5px 0px;}
+.admBlog{
+	border-radius: 6px;
+	padding: 6px 30px 1px 30px; 
+	background-color: #f79533; 
+	color: #FFFFFF;
+	height:5rem;
+	margin-top: 0.1rem;
+	margin-bottom: 0.5rem;
+}
+.admNavR{padding: 0 3.5rem;}
+.admNavR li{margin: 0 1rem;}
+.admNavBac, .desk-admNavBac{background-image: linear-gradient(90deg,#f79533 0,#f37055 15%,#ef4e7b 30%,#a166ab 44%,#5073b8 58%,#1098ad 72%,#07b39b 86%,#6dba82 100%) !important;}
+
+/* createBlog */
+#main #title{width:600px;}
+#main #submitBtn{width:200px;}
+
+/* desk.html */
+.desk-panel{min-height:15rem; max-height:18rem;}
+.desk-panel .panel-body{padding: 5px 20px 5px 20px;}
+.desk-right{padding-right: 0;}
+/* mobile */
+@media (max-width : 768px) {
+	.admInfo .mob11{width: 100%; height: 5rem;}
+	.admInfo img{width: 5rem; height: 5rem;margin:0 -0.1rem;}
+	.admNavR{padding: 0 1rem; margin-right: 1.5rem; font-size: medium;}
+	.admNavR li{display: inline-block; margin: 0 1rem; float: right;}
+	.admNavBac{margin-right: -3rem;}
+	.admNavBac div, .desk-admNavBac div{display: inline-block; float: left;}
+	.desk-admNavBac{margin-left: 0;padding-left: 0;}
+	.admBlog{margin:0.1rem -1rem;border-radius: 0;height: 5.8rem;padding: 6px 10px 6px 10px;}
+	.admBlog h4{font-size: 1.5rem;}
+	.desk-main{marig-right:-5rem;}
+	.desk-left{padding-left: 0;}
+	.desk-admInfo img{margin:0 0.5rem}
+	.desk-admInfo div{background-color: #FFFFFF;}
+	.desk-admNavBac ul li{margin:0 1rem}
+	.desk-admNavBac ul i{width: 3rem;font-size: 1.3rem;color: #002240;}
+}

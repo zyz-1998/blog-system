@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>Front Desk Home</title>
+
+		<link href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+		<link href="css/custom.css" th:href="@{/css/custom.css}" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+		<script src="js/jquery1.12.4.min.js" th:src="@{/js/jquery1.12.4.min.js}"></script>
+		<script src="js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<!-- Page navbar left -->
+			<div class="col-md-2 col-sm-2 col-xs-2 text-center desk-right">
+				<nav class="admNavl">
+					<ul class="nav nav-pills nav-stacked ">
+					<li>
+						<div class="admBlog">
+						<h4>ZYZ BLOG</h4>
+						</div>
+					</li>
+					<li class="admInfo admnavlli desk-admInfo">
+						<div class="mob11">
+						<img src="img/bootstrap-solid.jpg" th:src="@{/img/bootstrap-solid.jpg}"  class="img-circle pull-left img-responsive"/>
+						</div>
+						<div class="text-left hidden-xs info11">
+							<h5>admin</h5>
+							<p>人生若只如初见,何事秋风悲画扇</p>
+						</div>
+					</li>
+					<li class="admnavlli"><a href="#"><i class="fa fa-archive"></i><span class="hidden-xs">&nbsp首页</span></a></li>
+					<li class="admnavlli"><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> <span class="hidden-xs">&nbsp关于</span></a></li>
+					<li class="admnavlli"><a href="#"><i class="fa fa-clipboard"></i><span class="hidden-xs">&nbsp归档</span></a></li>
+					<li class="admnavlli"><a href="#"><i class="fa fa-at"></i><span class="hidden-xs">&nbsp分类</span></a></li>
+					<li class="admnavlli"><a href="#"><i class="fa fa-bookmark-o" aria-hidden="true"></i></i><span class="hidden-xs">&nbsp标签</span></a></li>
+					<li class="admnavlli"><a href="#"><i class="fa fa-search" aria-hidden="true"></i><span class="hidden-xs">&nbsp搜索</span></a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- Page Right -->
+			<div class="col-md-10 col-sm-10 col-xs-10 desk-right">
+				<nav class="navbar navbar-default desk-admNavBac">
+					<div class="navbar-header">
+					  <a class="navbar-brand" href="#"><i class="fa fa-bars"></i></a>
+					</div>
+					<ul class="nav navbar-nav navbar-right admNavR">
+					  <li><a href="#"><i class="fa fa-github" aria-hidden="true">Githuab</i></a></li>
+					  <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true">Facebook</i></a></li>
+					</ul>
+				</nav>
+				
+				<div id="desk-main">
+					<div class="panel panel-warning desk-panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">面板标题</h3>
+							<small>author</small>
+						</div>
+						<div class="panel-body">
+							trim() 函数移除字符串两侧的空白字符或其他预定义字符。
+						</div>
+					</div>
+					<div class="panel panel-warning desk-panel" th:each="blog : ${blogAll}">
+						<div class="panel-heading">
+							<span class="panel-title" th:text="${blog.title}"></span>
+							<span class="pull-right">
+								<a  href="#" th:href="@{/home/main/}+${blog.id}">
+									<i class="fa fa-hand-o-right" aria-hidden="true"></i>
+								</a>
+							</span>
+						</div>
+						<div class="panel-body" th:text="${blog.summary}">
+							文本内容
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
