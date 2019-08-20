@@ -24,5 +24,5 @@
 ![前台预览](/images/190817-2.jpg)
 ![后台预览](/images/190817-3.jpg)
 ![后台预览](/images/190817-5.jpg)
-<div style="margin: 0 auto">![后台预览](/images/190817-8.jpg)</div>
+![后台预览](/images/190817-8.jpg)
 
