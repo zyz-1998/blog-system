@@ -7,10 +7,15 @@
 
 #### 1.1 开发工具
 软件：intellij
+
 框架：springboot、shiro(安全框架)
+
 前端：thymeleaf + bootstrap
+
 日志：logback
+
 数据库：mysql
+
 插件：Editormd(支持markdown)
 
 #### 1.2 效果预览
