@@ -35,8 +35,8 @@
 .admNavBac, .desk-admNavBac{background-image: linear-gradient(90deg,#f79533 0,#f37055 15%,#ef4e7b 30%,#a166ab 44%,#5073b8 58%,#1098ad 72%,#07b39b 86%,#6dba82 100%) !important;}
 
 /* createBlog */
-#main #title{width:600px;}
-#main #submitBtn{width:200px;}
+#main #title{}
+#main #submitBtn{}
 
 /* desk.html */
 .desk-panel{min-height:15rem; max-height:18rem;}

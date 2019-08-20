@@ -3,6 +3,8 @@ package com.neo.controller;
 import com.neo.dao.BlogArticleDao;
 import com.neo.model.BlogArticle;
 import com.neo.sevice.BlogArticleService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,19 +23,23 @@ import java.util.Map;
 
 @Controller
 public class BlogArticleController {
-    private static String UPLOADED_FOLDER = "E://temp//";
+    private static String UPLOADED_FOLDER = "D://IJProject//SpringBoot-test//blog-test-v1.0//src//main//resources//static//uploadfiles//";
+    protected static final Logger logger = LoggerFactory.getLogger(BlogArticleController.class);
     @Resource
     BlogArticleService blogArticleService;
 
     @Resource
     BlogArticleDao blogArticleDao;
-    @GetMapping("/admin")
+    @GetMapping({"/","/admin"})
     public String list(Model model){
         List<BlogArticle> blog = blogArticleService.getBlogArticleList();
         model.addAttribute("blogAll",blog);
         return "/admin";
     }
 
+    /**
+     * 浏览博文内容
+     */
     @GetMapping(value = "/admin/{id}")
     public String blogEdit (@PathVariable("id")Long id, Model model){
         BlogArticle blog = blogArticleService.getBlogById(id);
@@ -41,17 +47,30 @@ public class BlogArticleController {
         return "/edit";
     }
 
-//    CreateBlog start
+    /**
+     * 创建博文
+     */
     @RequestMapping("createBlog")
     public String   editor(){
         return "/createBlog";
     }
 
+    /**
+     * 删除博文
+     */
+    @GetMapping(value = "/delete/{id}")
+    public String   delete(@PathVariable("id")Long id, Model model){
+        BlogArticle blog = blogArticleService.getBlogById(id);
+        logger.info("Delete blogArticle"+id + " "+ blog.getTitle());
+        blogArticleDao.deleteById(id);
+        return "/admin";
+    }
+
     @RequestMapping("submit")
     @ResponseBody
     public void  submit(BlogArticle blog){
-        System.out.println(blog.getContent());
-        System.out.println(blog.getHtmlContent());
+        logger.info("Create blogArticle"+ blog.getTitle());
+        logger.info("blogArticle：\n"+ blog.getContent());
         blogArticleDao.save(blog);
     }
 
@@ -59,7 +78,7 @@ public class BlogArticleController {
     @ResponseBody
     public  BlogArticle wxcontent(){
         BlogArticle blog =    blogArticleDao.findBlogById(2l);
-        System.out.println(blog.getHtmlContent());
+        logger.info("blogArticle: "+ blog.getHtmlContent());
         return  blog;
     }
 
@@ -68,10 +87,8 @@ public class BlogArticleController {
     public @ResponseBody
     Map<String,Object> demo(@RequestParam(value = "editormd-image-file", required = false) MultipartFile file, HttpServletRequest request) {
         Map<String,Object> resultMap = new HashMap<String,Object>();
-        System.out.println(request.getContextPath());
         String realPath = UPLOADED_FOLDER;
         String fileName = file.getOriginalFilename();
-        System.out.println(fileName);
 /*        File targetFile = new File(realPath, fileName);
         if(!targetFile.exists()){
             targetFile.mkdirs();
@@ -85,12 +102,14 @@ public class BlogArticleController {
             resultMap.put("success", 1);
             resultMap.put("message", "上传成功！");
             resultMap.put("url",UPLOADED_FOLDER+fileName);
+            logger.info("uploading images"+ UPLOADED_FOLDER+fileName);
+
         } catch (Exception e) {
             resultMap.put("success", 0);
             resultMap.put("message", "上传失败！");
+            logger.info("uploading images wrong"+fileName);
             e.printStackTrace();
         }
-        System.out.println(resultMap.get("success"));
         return resultMap;
 
 

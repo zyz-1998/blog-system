@@ -22,8 +22,6 @@ $(function() {
                 this.height(500);
                 //this.resize("100%", 640);
             }
-
-
         });
         $("#submitBtn").click(
             function () {

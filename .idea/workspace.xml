@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4627c9e0-e515-4270-a1d7-3c8a20a2fd02" name="Default Changelist" comment="" />
+    <list default="true" id="4627c9e0-e515-4270-a1d7-3c8a20a2fd02" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/logs/runtime.log.2019-08-20.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/neo/config/shiro/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neo/config/shiro/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/neo/controller/BlogArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neo/controller/BlogArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/neo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/neo/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/EditorMd.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/EditorMd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/commons/bar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neo/config/shiro/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neo/config/shiro/ShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neo/controller/BlogArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neo/controller/BlogArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/neo/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/neo/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/EditorMd.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/EditorMd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/commons/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/commons/bar.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +118,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

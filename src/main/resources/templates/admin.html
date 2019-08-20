@@ -30,8 +30,10 @@
 						<div class="panel-heading">
 							<span class="panel-title" th:text="${blog.title}"></span>
 							<span class="pull-right">
-								<a  href="#" th:href="@{/admin/}+${blog.id}">
+								<a  href="#" th:href="@{/delete/}+${blog.id}">
 									<i class="fa fa-times-circle" aria-hidden="true"></i>
+								</a>
+								<a  href="#" th:href="@{/admin/}+${blog.id}">
 									<i class="fa fa-hand-o-right" aria-hidden="true"></i>
 								</a>
 							</span>
